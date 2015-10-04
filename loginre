@@ -1,0 +1,33 @@
+<head>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ $('#submit').click(function(){
+   if($('#na').val()=='wang'&&$('#pa').val()='123456')
+   {alert("Success.");}
+   else if($('#na').val()=="")
+   {alert("Please Enter Username.");}
+   else if($('#pa').val()=="")
+   {alert("Please Enter Password.");}
+   else {alert("Error.");}   
+ });
+});
+</script>
+</head>
+
+
+
+<body>
+<form id="form1" name="form1">
+Username:
+<input id="na" type="text" name="username"/>
+<br/>
+<br/>
+Password:
+<input id="pa" type="password" name="password"/>
+<br />
+<br/>
+<input id="submit" type="button" value="Log in"/>
+<input type="reset" value="Reset"/>
+</form>
+</body>
