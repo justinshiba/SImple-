@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>Log In jquery</title>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#submit').click(function(){
+       $.post("http://localhost:1337/",
+       {
+         name:$('#na').val(),
+         password:$('#pa').val()
+       },
+       function(data){      
+          alert(data);
+       });
+    });
+});
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1">
+Username:
+<input type="text" name="username" id="na"/>
+<br/>
+<br/>
+Password:
+<input type="password" name="password" id="pa"/>
+<br />
+<br/>
+<input id="submit" type="button" value="Log in"/>
+<input type="reset" value="Reset"/>
+</form>
+</body>
+</html>
